@@ -10,7 +10,7 @@ RUN \
     pecl install mongodb xdebug && \
     docker-php-ext-enable mongodb xdebug && \
     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
-    docker-php-ext-install -j$(nproc) exif soap gd xsl mbstring pdo pdo_mysql zip bz2 bcmath
+    docker-php-ext-install -j$(nproc) pcntl exif soap gd xsl mbstring pdo pdo_mysql zip bz2 bcmath
 
 # Install Composer
 RUN curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
